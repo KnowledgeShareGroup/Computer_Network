@@ -5,6 +5,8 @@
 大家都遵守的规则，就叫做“协议”。
 -[1][互联网协议入门](https://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html)
 
+### 五层模型
+![five-layer-model](/images/五层.png)
 ### IP 协议
 规定网络地址的协议，叫做IP协议，它所定义的地址被称为IP地址。
 根据IP 协议发送的数据，就叫做IP数据包。不难想象，其中必定包括IP地址信息
