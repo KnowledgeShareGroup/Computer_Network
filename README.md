@@ -23,6 +23,7 @@
 -[1][阮一峰关于TCP协议](https://www.ruanyifeng.com/blog/2017/06/tcp-protocol.html)
 ### DNS
 [DNS原理](https://www.ruanyifeng.com/blog/2016/06/dns.html)
+![DNS](/images/DNS_sample.png)
 
 ## 阶段性总结
 ![data_package](/images/data_frame.png)
