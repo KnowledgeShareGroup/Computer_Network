@@ -4,7 +4,7 @@
 
 组成结构：`请求行+ 请求头 + 空行 + body`或者`响应⾏、响应头、空⾏、响应体`
 
-<img src="/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327001144979.png" alt="image-20220327001144979" style="zoom:50%;" />
+<img src="images/image-20220327001144979.png" alt="image-20220327001144979" style="zoom:50%;" />
 
 举个🌰请求报文和响应报文：
 
