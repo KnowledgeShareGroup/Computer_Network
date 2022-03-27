@@ -686,7 +686,7 @@ Content-Length: 0
 
 Nginx 是一种高性能的 反向代理 服务器，可以用来轻松解决跨域问题。
 
-<img src="/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327212629989.png" alt="image-20220327212629989" style="zoom:50%;" />
+<img src="images/image-20220327212629989.png" alt="image-20220327212629989" style="zoom:50%;" />
 
 正向代理帮客户端访问客户端访问不到的服务器，然后将结果返回给客户端，
 
@@ -714,7 +714,7 @@ Nginx 相当于起了一个跳板机，这个跳板机的域名也是 client.com
 
 传统TLS1.2握手流程如下
 
-<img src="/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327213114343.png" alt="image-20220327213114343" style="zoom:50%;" />
+<img src="images/image-20220327213114343.png" alt="image-20220327213114343" style="zoom:50%;" />
 
 **step 1: Client Hello**
 
@@ -788,7 +788,7 @@ HTTPS 在传输数据的过程中会对数据进行加密处理，保证安全�
 
 对称加密的特点是文件加密和解密使用相同的密钥，即加密密钥也可以用作解密密钥，这种方法在密码学中叫做对称加密算法，对称加密算法使用起来简单快捷，密钥较短，且破译困难，**通信的双⽅都使⽤同⼀个秘钥进⾏加密, 解密。**⽐如，两个人事先约定的暗号，就属于对称加密。 
 
-![image-20220327214224291](/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327214224291.png)
+![image-20220327214224291](images/image-20220327214224291.png)
 
 对称加密的特点是：
 
@@ -820,7 +820,7 @@ HTTPS 在传输数据的过程中会对数据进行加密处理，保证安全�
 
 特征: 私钥可以解密公钥加密的内容,  公钥可以解密私钥加密的内容
 
-<img src="/Users/Mr.Meow/Desktop/阶段八 面试指导+前端面试题【重要+必看】/前端就业加强课/day03（HTTP协议+TCP协议+浏览器原理）/02-笔记/images/image-20210306011528361.png" alt="image-20210306011528361" style="zoom:50%;" />
+<img src="images/image-20210306011528361.png" alt="image-20210306011528361" style="zoom:50%;" />
 
 非对称加密的特点是：
 
@@ -847,7 +847,7 @@ HTTPS 在传输数据的过程中会对数据进行加密处理，保证安全�
 
 进而进行非对称加密, 使用公钥, 加密`对称加密密钥`, 传递给服务器, 后续通信都使用对称加密! 
 
-![image-20210308102015595](file:///Users/Mr.Meow/Desktop/%E9%98%B6%E6%AE%B5%E5%85%AB%20%E9%9D%A2%E8%AF%95%E6%8C%87%E5%AF%BC+%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E3%80%90%E9%87%8D%E8%A6%81+%E5%BF%85%E7%9C%8B%E3%80%91/%E5%89%8D%E7%AB%AF%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE/day03%EF%BC%88HTTP%E5%8D%8F%E8%AE%AE+TCP%E5%8D%8F%E8%AE%AE+%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86%EF%BC%89/02-%E7%AC%94%E8%AE%B0/images/image-20210308102015595.png?lastModify=1648268430)
+![image-20210308102015595](images/image-20210308102015595.png?lastModify=1648268430)
 
 **问题是: 初步互通消息时, 如果请求拿到的公钥信息, 就是假的, 或者不安全的! 那么后续的所有操作, 都将是不安全的!**
 
@@ -857,13 +857,13 @@ HTTPS 在传输数据的过程中会对数据进行加密处理，保证安全�
 
 **CA证书中心会对你网站的公钥, 网站的域名地址,  证书到期时间, 等一些相关信息一起加密签发数字证书, 保证你网站的安全性**
 
-![image-20210306014409595](file:///Users/Mr.Meow/Desktop/%E9%98%B6%E6%AE%B5%E5%85%AB%20%E9%9D%A2%E8%AF%95%E6%8C%87%E5%AF%BC+%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E3%80%90%E9%87%8D%E8%A6%81+%E5%BF%85%E7%9C%8B%E3%80%91/%E5%89%8D%E7%AB%AF%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE/day03%EF%BC%88HTTP%E5%8D%8F%E8%AE%AE+TCP%E5%8D%8F%E8%AE%AE+%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86%EF%BC%89/02-%E7%AC%94%E8%AE%B0/images/image-20210306014409595.png?lastModify=1648268430)
+![image-20210306014409595](images/image-20210306014409595.png?lastModify=1648268430)
 
 
 
 当公司申请了 CA 证书后, 就应该在响应时, 将数字证书一起发送给客户端
 
-![image-20210306021013686](file:///Users/Mr.Meow/Desktop/%E9%98%B6%E6%AE%B5%E5%85%AB%20%E9%9D%A2%E8%AF%95%E6%8C%87%E5%AF%BC+%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E3%80%90%E9%87%8D%E8%A6%81+%E5%BF%85%E7%9C%8B%E3%80%91/%E5%89%8D%E7%AB%AF%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE/day03%EF%BC%88HTTP%E5%8D%8F%E8%AE%AE+TCP%E5%8D%8F%E8%AE%AE+%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86%EF%BC%89/02-%E7%AC%94%E8%AE%B0/images/image-20210306021013686.png?lastModify=1648268430)
+![image-20210306021013686](images/image-20210306021013686.png?lastModify=1648268430)
 
 而客户端, 接收到消息后, 就可以查看证书 , 权威CA机构都可以
 
@@ -871,7 +871,7 @@ HTTPS 在传输数据的过程中会对数据进行加密处理，保证安全�
 
 2. 如果签发证书的机构, 不权威, 发出警告 
 
-   ![image-20210306021532010](file:///Users/Mr.Meow/Desktop/%E9%98%B6%E6%AE%B5%E5%85%AB%20%E9%9D%A2%E8%AF%95%E6%8C%87%E5%AF%BC+%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E3%80%90%E9%87%8D%E8%A6%81+%E5%BF%85%E7%9C%8B%E3%80%91/%E5%89%8D%E7%AB%AF%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE/day03%EF%BC%88HTTP%E5%8D%8F%E8%AE%AE+TCP%E5%8D%8F%E8%AE%AE+%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86%EF%BC%89/02-%E7%AC%94%E8%AE%B0/images/image-20210306021532010.png?lastModify=1648268430)
+   ![image-20210306021532010](images/image-20210306021532010.png?lastModify=1648268430)
 
 3. 如果证书过期了, 浏览器也会发出警告
 
@@ -908,7 +908,7 @@ HTTPS 在传输数据的过程中会对数据进行加密处理，保证安全�
 
 **二进制分帧**
 
-<img src="/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327220233875.png" alt="image-20220327220233875" style="zoom:50%;" />
+<img src="images/image-20220327220233875.png" alt="image-20220327220233875" style="zoom:50%;" />
 
 首先，HTTP/2 认为明文传输对机器而言太麻烦了，不方便计算机的解析，因为对于文本而言会有多义 性的字符，比如回车换行到底是内容还是分隔符，在内部需要用到状态机去识别，效率比较低。于是 HTTP/2 干脆把报文全部换成二进制格式，全部传输 01 串，方便了机器的解析。
 
@@ -935,7 +935,7 @@ HTTPS 在传输数据的过程中会对数据进行加密处理，保证安全�
 
 下图为首部表的更新示意图：
 
-<img src="file:///Users/Mr.Meow/Desktop/%E9%98%B6%E6%AE%B5%E5%85%AB%20%E9%9D%A2%E8%AF%95%E6%8C%87%E5%AF%BC+%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E3%80%90%E9%87%8D%E8%A6%81+%E5%BF%85%E7%9C%8B%E3%80%91/%E5%89%8D%E7%AB%AF%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE/day03%EF%BC%88HTTP%E5%8D%8F%E8%AE%AE+TCP%E5%8D%8F%E8%AE%AE+%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86%EF%BC%89/02-%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%89%8B%E5%86%8C.assets/image-20210219160534616.png?lastModify=1648268430" alt="image-20210219160534616" style="zoom:30%;" />
+<img src="images/image-20210219160534616.png?lastModify=1648268430" alt="image-20210219160534616" style="zoom:30%;" />
 
 **服务器推送**
 
