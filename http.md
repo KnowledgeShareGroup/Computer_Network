@@ -4,7 +4,7 @@
 
 组成结构：`请求行+ 请求头 + 空行 + body`或者`响应⾏、响应头、空⾏、响应体`
 
-<img src="images/image-20220327001144979.png" alt="image-20220327001144979" style="zoom:50%;" />
+<img src="images/image-20220327001144979.png" alt="image-20220327001144979" style="weight:50%;" />
 
 举个🌰请求报文和响应报文：
 
@@ -39,7 +39,7 @@ Host: www.abc.com
 
 通信大概是这个模式：
 
-<img src="/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327010344636.png" alt="image-20220327010344636" style="zoom:50%;" />
+<img src="images/image-20220327010344636.png" alt="image-20220327010344636" style="zoom:50%;" />
 
 #### 2. HTTP的请求方法
 
@@ -143,7 +143,7 @@ RFC 规定 HTTP 的状态码为三位数，被分为五类:
 
 URI, 全称为(Uniform Resource Identifier), 也就是统一资源标识符，它的作用很简单，就是区分互联网 上不同的资源。 但是，它并不是我们常说的网址 , 网址指的是 URL , 实际上 URI 包含了 URN 和 URL 两个部分，由于 URL 过于普及，就默认将 URI 视为 URL
 
-<img src="/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327010657425.png" alt="image-20220327010657425" style="zoom:70%;" />
+<img src="images/image-20220327010657425.png" alt="image-20220327010657425" style="zoom:70%;" />
 
 scheme 表示协议名，比如 http , https , file 等等。后面必须和 :// 连在一起。 
 
@@ -216,7 +216,7 @@ Accept-Charset: charset=utf-8
 
 ##### 总结
 
-<img src="/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327014125370.png" alt="image-20220327014125370" style="zoom:50%;" />
+<img src="images/image-20220327014125370.png" alt="image-20220327014125370" style="zoom:50%;" />
 
 #### 8. 定长和不定长的数据，HTTP是如何传输的？
 
@@ -427,7 +427,7 @@ web服务缓存大致可以分为：数据库缓存，服务器缓存（代理�
 
 命中强缓存时，浏览器并不会将请求发送给服务器
 
-![image-20220327151635524](/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327151635524.png)
+![image-20220327151635524](./images/image-20220327151635524.png)
 
 强缓存是利用，http报文header里的cache-control（优先级更高）或者expires来控制的
 
@@ -451,7 +451,7 @@ Cache-Control : 指定一个过期时间 (315360000s), 这个资源你加载到�
 
 浏览器第一次请求一个资源的时候，服务器返回的header中会加上**Last-Modify**表示该资源最后修改的时间（如上图），当浏览器再次请求该资源（协商请求）时，发送的请求头中会包含If-Modify-Since，**该值为缓存之前返回的Last-Modify**。服务器收到If-Modify-Since后，根据实际服务器的资源的最后修改时间, 进行判断是否命中缓存。如果命中缓存，则返回 **http304**，并且不会返回资源内容，并且不会返回Last-Modify。
 
-![image-20220327153052472](/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327153052472.png)
+![image-20220327153052472](images/image-20220327153052472.png)
 
 注意他们对比的是服务器的修改时间，所以客户端与服务器之间的时间差不会有影响，但是如果资源在1s内被修改了多次，这个时候就无法准确判断资源是否更新了，因此就出现了**ETag/If-None-Match**
 
@@ -459,7 +459,7 @@ Cache-Control : 指定一个过期时间 (315360000s), 这个资源你加载到�
 
 Etag/If-None-Match返回的是一个校验码。Etag可以保证每一个资源都是唯一的，资源只要变化了Etag就会变。服务器根据浏览器发过来的If-None-Match来判断是否命中缓存。
 
-![image-20220327153428035](/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220327153428035.png)
+![image-20220327153428035](images/image-20220327153428035.png)
 
 ETag生成靠以下几种因子
 
@@ -496,11 +496,11 @@ Etag是服务器自动生成或者由开发者生成的对应资源在服务器�
 
 
 
-![image-20210308182913833](file:///Users/Mr.Meow/Desktop/%E9%98%B6%E6%AE%B5%E5%85%AB%20%E9%9D%A2%E8%AF%95%E6%8C%87%E5%AF%BC+%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E3%80%90%E9%87%8D%E8%A6%81+%E5%BF%85%E7%9C%8B%E3%80%91/%E5%89%8D%E7%AB%AF%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE/day03%EF%BC%88HTTP%E5%8D%8F%E8%AE%AE+TCP%E5%8D%8F%E8%AE%AE+%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86%EF%BC%89/02-%E7%AC%94%E8%AE%B0/images/image-20210308182913833.png?lastModify=1648268430)
+![image-20210308182913833](images/image-20210308182913833.png?lastModify=1648268430)
 
 **浏览器第二次请求**
 
-![image-20210308182925144](file:///Users/Mr.Meow/Desktop/%E9%98%B6%E6%AE%B5%E5%85%AB%20%E9%9D%A2%E8%AF%95%E6%8C%87%E5%AF%BC+%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E3%80%90%E9%87%8D%E8%A6%81+%E5%BF%85%E7%9C%8B%E3%80%91/%E5%89%8D%E7%AB%AF%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE/day03%EF%BC%88HTTP%E5%8D%8F%E8%AE%AE+TCP%E5%8D%8F%E8%AE%AE+%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86%EF%BC%89/02-%E7%AC%94%E8%AE%B0/images/image-20210308182925144.png?lastModify=1648268430)
+![image-20210308182925144](images/image-20210308182925144.png?lastModify=1648268430)
 
 #### 15.HTTP代理
 
