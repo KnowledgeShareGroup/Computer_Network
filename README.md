@@ -6,7 +6,9 @@
 -[1][互联网协议入门](https://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html)
 
 ### 五层模型
+
 ![five-layer-model](/images/五层.png)
+
 ### Ethernet 协议
 早期的时候，每家公司都有自己的电信号分组方式。逐渐地，一种叫做"以太网"（Ethernet）的协议，占据了主导地位。
 以太网规定，一组电信号构成一个数据包，叫做"帧"（Frame）。每一帧分成两个部分：标头（Head）和数据（Data）。
@@ -19,14 +21,27 @@
 需要在数据包中加入端口号，几乎就是在数据前面，加上端口号。
 ### TCP 协议
 可以近似的认为它是有确认机制的UDP协议，每发出一个数据包都要确认。如果有一个数据包出现丢包，就收不到确认，发出方
-就有必要重发这个数据包了
--[1][阮一峰关于TCP协议](https://www.ruanyifeng.com/blog/2017/06/tcp-protocol.html)
+就有必要重发这个数据包了.
+
+**TCP/IP 是用于因特网(Internet)的通信协议**
+***TCP (Transmission Control Protocol)和UDP(User Datagram Protocol)协议属于传输层协议。其中TCP提供IP环境下的数据可靠传输，它提供的服务包括数据流传送、可靠性、有效流控、全双工操作和多路复 用。通过面向连接、端到端和可靠的数据包发送。通俗说，它是事先为所发送的数据开辟出连接好的通道，然后再进行数据发送；而UDP则不为IP提供可靠性、 流控或差错恢复功能。一般来说，TCP对应的是可靠性要求高的应用，而UDP对应的则是可靠性要求低、传输经济的应用。 TCP支持的应用协议主要有：Telnet、FTP、SMTP等； UDP支持的应用层协议主要有：NFS（网络文件系统***
+- [1][阮一峰关于TCP协议](https://www.ruanyifeng.com/blog/2017/06/tcp-protocol.html)
 ### DNS
 [DNS原理](https://www.ruanyifeng.com/blog/2016/06/dns.html)
+
 ![DNS](/images/DNS_sample.png)
 
+### 报文/帧/数据包的区别
+|层|名称|
+|应用层|报文 message: 一般指完整的信息,传输层实现报文交付|
+|传输层|报文段 segment: 组成报文的每个分组|
+|网络层|数据包 datapacket: 是TCP/IP通信协议传输中的数据单元; 数据报 datagram: 通过网络传输的基本数据单元称为数据报 Datagram|
+|链路层|帧 frame: 数据链路层的协议数据单元|
+|物理层|PDU: 协议数据单元|
 ## 阶段性总结
-![data_package](/images/data_frame.png)
+
+![data package](/images/data_frame.png)
+
 网络通信就是交换数据包，电脑A向电脑B发送一个数据包，后者收到了，回复一个数据包从而实现两台电脑之间的通信。
 发送一个数据包，需要知道两个地址
 - [1] MAC 地址

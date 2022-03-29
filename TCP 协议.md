@@ -1,4 +1,4 @@
-### TCP协议
+### TCP协议 (Transimision Control Protocol)
 
 ------
 ### TCP报文头部的字段
