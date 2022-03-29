@@ -86,7 +86,7 @@ SYN FLOOD属于典型的DOS攻击，原理是，客户端在短时间内伪造�
 
 流程图如下：
 
-<img src="/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220329122311851.png" alt="image-20220329122311851" style="zoom:50%;" />
+<img src="images/image-20220329122311851.png" alt="image-20220329122311851" width="50%;" />
 
 注意：客户端最后握手的ACK不一定要等到服务端的HTTP响应到达后才返回ACK，这是不相关的两个过程。
 
@@ -116,7 +116,7 @@ kind(1 字节) + length(1 字节) + info(8 个字节)
 
   
 
-<img src="/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220329123558570.png" alt="image-20220329123558570" style="zoom:80%;" />
+<img src="images/image-20220329123558570.png" alt="image-20220329123558570" style="zoom:80%;" />
 
 左图RTT明显偏大，应该采用第二次发送时间为开始时间，右图有明显嫌小，应该采用第一次发送的时间为开始时间。
 
@@ -203,7 +203,7 @@ RTO = μ * SRTT + ∂ * RTTVAR
 
 **(1)发送窗口**
 
-![image-20220329130038149](/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220329130038149.png)
+![image-20220329130038149](images/image-20220329130038149.png)
 
 其中包含四大部分:
 
@@ -212,13 +212,13 @@ RTO = μ * SRTT + ∂ * RTTVAR
 -   未发送但可以发送
 -   未发送也不可以发送
 
-![image-20220329130112199](/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220329130112199.png)
+![image-20220329130112199](images/image-20220329130112199.png)
 
 发送窗口就是途中被框住的范围。SND即send，WND（window），UNA（unacknowledged）表示未确认，NXT（next）表示下一个发送的位置。
 
 **(2)接收窗口**
 
-![image-20220329130400375](/Users/Mr.Meow/Library/Application Support/typora-user-images/image-20220329130400375.png)
+![image-20220329130400375](images/image-20220329130400375.png)
 
 REV 即 receive ，NXT 表示下一个接收的位置，WND 表示接收窗口大小。
 
